@@ -25,3 +25,8 @@ granada.data <- read.csv('user-data-Granada.csv',sep=';')
 
 summary(granada.data)
 
+* Para instalar un package (por ejemplo ggplot2 para hacer gráficos)
+
+install.package("ggplot2")
+
+Si no lo estamos ejecutando como root (lo cual está bien), nos preguntará si queremos utilizar un repositorio de paquetes local. Seleccionamos la carpeta (por defecto ~/R/) y se descargará el paquete, se compilará (no he probado lo que ocurre si no tenemos instalado el entorno de compilación) y ya podemos usarlo. [Más detalles](http://www.r-bloggers.com/installing-r-packages/)
