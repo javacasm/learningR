@@ -35,3 +35,21 @@ Si no lo estamos ejecutando como root (lo cual está bien), nos preguntará si q
 
 * Cuando lo usamos se genera un fichero llamado **.Rhistory** con los distintos comandos, y ¿ cuando abrimos R desde una carpeta con un fichero así tenemos accesible  el histórico de comandos
 
+* Si usamos **plot(dataset)** se representan todos los gráficos posibles de cada columna con todas las demas. En la diagonal aparecen los nombres de esa columna/fila
+
+* Para representar un gráfico hacemos **plot(dataset$columanY,dataset$columnaY)** donde podemos usar cualquier operación matemática
+
+* Podemos añadir una columna sin más que utilizar **dataset$NuevaColumna<-funcion(otros datos)** . Por ejemplo
+
+	 granada.data$orderScaled<-seq_along(granada.data$contributions)/length(granada.data$contributions)
+
+* **scale(x)** devuelve una columna con los valores centrados en la media [scale](https://stat.ethz.ch/R-manual/R-patched/library/base/html/scale.html)
+
+* Para normalizar una columna al rango 0,1 hacemos [fuente](http://stackoverflow.com/questions/15468866/scaling-a-numeric-matrix-in-r-with-values-0-to-1):
+
+	apply(m, MARGIN = 2, FUN = function(X) (X - min(X))/diff(range(X)))
+
+* Para normalizar una columna que es una secuencia entre 1 y n basta con hacer
+
+	granada.data$orderScaled<-seq_along(granada.data$contributions)/length(granada.data$contributions)
+
