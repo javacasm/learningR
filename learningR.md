@@ -55,6 +55,10 @@ Si no lo estamos ejecutando como root (lo cual está bien), nos preguntará si q
 
 * Exportar ** write.csv(dataset, "filename.csv") ** para formato csv o ** write.table(dataset, "filename.txt, sep="\t") ** para exportar a otro formato
 
+* Importar ** dataset<-read.csv('fichero.csv',sep=';') ** en un dataset
+
+madrid.data <- read.csv('user-data-Madrid.csv',sep=';')
+
 * Podemos hacer una **regresión lineal** (linear model) usando ** lm(waiting ~ duration) ** y representar la línea con abline(lm(waiting ~ duration)) (no me funciona!!) [detalles](http://msenux.redwoods.edu/math/R/regression.php)
 
 * Para guardar una imagen podemos hacer ggsave("image.png")
@@ -64,4 +68,6 @@ Si no lo estamos ejecutando como root (lo cual está bien), nos preguntará si q
 * Para incluir varias series de puntos: 
 
 	qplot(zaragoza.data$orderScaled,log10(zaragoza.data$contributions)) + 
-	geom_point(aes(y=log10(almeria.data$contributions),x=almeria.data$orderScaled,color='almeria.data$contributions')) 
+	geom_point(aes(y=log10(almeria.data$contributions),x=almeria.data$orderScaled,color='almeria.data$contributions'))  
+
+* Los datasets usados se guardan en .Rdata Si guardamos el workspace al salir se irán
