@@ -55,4 +55,13 @@ Si no lo estamos ejecutando como root (lo cual está bien), nos preguntará si q
 
 * Exportar ** write.csv(dataset, "filename.csv") ** para formato csv o ** write.table(dataset, "filename.txt, sep="\t") ** para exportar a otro formato
 
-* Podemos hacer una **regresión lineal** usando ** lm(waiting ~ duration) ** y representar la línea con abline(lm(waiting ~ duration)) (no me funciona!!!)
+* Podemos hacer una **regresión lineal** (linear model) usando ** lm(waiting ~ duration) ** y representar la línea con abline(lm(waiting ~ duration)) (no me funciona!!) [detalles](http://msenux.redwoods.edu/math/R/regression.php)
+
+* Para guardar una imagen podemos hacer ggsave("image.png")
+
+* Para usar una librería haremos ** library("ggplot2") ** lo que nos permitirá usar nuevos métodos
+
+* Para incluir varias series de puntos: 
+
+	qplot(zaragoza.data$orderScaled,log10(zaragoza.data$contributions)) + 
+	geom_point(aes(y=log10(almeria.data$contributions),x=almeria.data$orderScaled,color='almeria.data$contributions')) 
