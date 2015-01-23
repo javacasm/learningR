@@ -54,3 +54,5 @@ Si no lo estamos ejecutando como root (lo cual está bien), nos preguntará si q
 	granada.data$orderScaled<-seq_along(granada.data$contributions)/length(granada.data$contributions)
 
 * Exportar ** write.csv(dataset, "filename.csv") ** para formato csv o ** write.table(dataset, "filename.txt, sep="\t") ** para exportar a otro formato
+
+* Podemos hacer una **regresión lineal** usando ** lm(waiting ~ duration) ** y representar la línea con abline(lm(waiting ~ duration)) (no me funciona!!!)
