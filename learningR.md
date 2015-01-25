@@ -1,6 +1,8 @@
-¿qué es R?
-R es un potente paquete de análisis numérico y estadístico. Es complemtante open-source.
-En su instalación normal nos proporciona una consola sobre la que trabajar.
+## ¿qué es R?
+
+[R](http://www.r-project.org/) es un potente paquete de análisis numérico y estadístico. Es completamente open-source y está disponible para Linux, Windows y Mac. Por supuesto también puedes descargar el código y compilarlo.
+
+En su instalación normal nos proporciona una consola sobre la que trabajar, en la que procesamos los datos, mostrándose lo gráficos que hagamos en una ventana independiente.
 
 ## Instalación
 
@@ -12,14 +14,17 @@ Unos 100Mb de instalación después podemos abrir la consola ejecutando
 
 	R
 
-Podemos abrir la ayuda en un navegador con 
-help.start()
+Podemos abrir la ayuda en un navegador con ** help.start() **
 
 ### Entornos más _amigables_ 
 
 Como hemos comentado, R es una herramienta interativa, podíamos decir que un intérprete, con el que interaccionamos mediante una consola. Todas las instrucciones que le vamos dando se guardan en un ficherro denominado .Rhistory que se crea en el directorio desde el que lo hemos arrando. Por esto podemos tener varios ficheros .Rhistory. Personalmente uso este hecho para guardar los pasos que voy dando en diferentes proyectos.
 
-Si eres más de ratón que de teclado puedes usar [RStudio](www.rstudio.com) que nos proporciona un entorno visual, donde es fácil ver los objetos (datos) que tenemos disponibles, los diferentes comandos empleados, etc.
+Si eres más de ratón que de teclado puedes usar [RStudio](www.rstudio.com) que nos proporciona un entorno visual, multi documento donde es fácil ver los objetos (datos) que tenemos disponibles, los diferentes comandos empleados, los gráficos realizados, etc.
+
+![rstudio](https://raw.githubusercontent.com/javacasm/learningR/master/rstudio.png)
+_Captura de rstudio donde se ven sus posibilidades de uso_
+
 
 ## CookBook
 
