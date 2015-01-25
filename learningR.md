@@ -6,11 +6,12 @@ En su instalación normal nos proporciona una consola sobre la que trabajar, en 
 
 ## Instalación
 
-### Instalar R en ubuntu
+Para instalar ** R ** en ubuntu
 
-sudo apt-get install r-base
+	sudo apt-get install r-base
 
-Unos 100Mb de instalación después podemos abrir la consola ejecutando 
+(Son unos 100Mb de instalación).
+Una vez instalado podemos abrir la consola ejecutando 
 
 	R
 
