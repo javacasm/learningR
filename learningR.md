@@ -29,6 +29,8 @@ _Captura de rstudio donde se ven sus posibilidades de uso_
 
 ## CookBook
 
+En este cajón de sastre iré poniendo lo que vaya aprendido antes de estructurarlo.
+
 * **q()** Salir de R
 
 * Cargar un fichero en formato csv
@@ -59,11 +61,11 @@ granada.data <- read.csv('user-data-Granada.csv',sep=';')
 		plot (fun2, -8, 5,add=TRUE)
 		plot (fun1, -8, 5,add=TRUE)
 
-	Para seleccionar el color usarmos ** col='red' **
+	Para seleccionar el color usarmos **col='red'**
 
 * Para representar un gráfico hacemos **plot(dataset$columanY,dataset$columnaY)** donde podemos usar cualquier operación matemática
 
-* Podemos añadir una columna sin más que utilizar **dataset$NuevaColumna<-funcion(otros datos)** . Por ejemplo
+* Podemos añadir una columna sin más que utilizar **ataset$NuevaColumna<-funcion(otros datos)** . Por ejemplo
 
 	 	granada.data$orderScaled<-seq_along(granada.data$contributions)/length(granada.data$contributions)
 
@@ -83,9 +85,9 @@ granada.data <- read.csv('user-data-Granada.csv',sep=';')
 
 		madrid.data <- read.csv('user-data-Madrid.csv',sep=';')
 
-* Podemos hacer una **regresión lineal** (linear model) usando ** lm(waiting ~ duration) ** y representar la línea con abline(lm(waiting ~ duration)) [detalles](http://msenux.redwoods.edu/math/R/regression.php) [abline](https://stat.ethz.ch/R-manual/R-devel/library/graphics/html/abline.html). Podemos hacer que no se transforme ¿según los ejes? con **untf='true' **
+* Podemos hacer una **regresión lineal** (linear model) usando ** lm(waiting ~ duration) ** y representar la línea con abline(lm(waiting ~ duration)) [detalles](http://msenux.redwoods.edu/math/R/regression.php) [abline](https://stat.ethz.ch/R-manual/R-devel/library/graphics/html/abline.html). Podemos hacer que no se transforme ¿según los ejes? con ** untf='true' **
 
-* Para ajustar por mínimos cuadrados ** [lsfit](https://stat.ethz.ch/R-manual/R-patched/library/stats/html/lsfit.html) [más detallado](http://sites.stat.psu.edu/~jls/stat511/lectures/lec10.pdf) 
+* Para ajustar por mínimos cuadrados ** [lsfit](https://stat.ethz.ch/R-manual/R-patched/library/stats/html/lsfit.html) ** [más detallado](http://sites.stat.psu.edu/~jls/stat511/lectures/lec10.pdf) 
 La diferencia entre ls y lsfit es que en lsfit tenemos que proporcionar la matriz del ajuste y en ls sólo damos los datos
 
 * Para guardar una imagen podemos hacer ggsave("image.png")
@@ -97,7 +99,7 @@ La diferencia entre ls y lsfit es que en lsfit tenemos que proporcionar la matri
 		qplot(zaragoza.data$orderScaled,log10(zaragoza.data$contributions)) + 
 		geom_point(aes(y=log10(almeria.data$contributions),x=almeria.data$orderScaled,color='almeria.data$contributions'))  
 
-* Los datasets usados se guardan en .Rdata Si guardamos el workspace al salir se irán
+* Los datasets usados se guardan en _.Rdata_ . Si guardamos el workspace al salir se irán guardando.
 
 * Podemos hacer que se muestren los ejes en escala logarítmica usando el parámetro de plot log="xy" (para los dos ejes o log="x" para uno)
 
