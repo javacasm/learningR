@@ -1,4 +1,4 @@
-## ¿qué es R?
+## ¿Qué es R?
 
 [R](http://www.r-project.org/) es un potente paquete de análisis numérico y estadístico. Es completamente open-source y está disponible para Linux, Windows y Mac. Por supuesto también puedes descargar el código y compilarlo.
 
