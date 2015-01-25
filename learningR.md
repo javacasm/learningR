@@ -1,7 +1,10 @@
 ¿qué es R?
-R es un potente paquete de análisis numérico y estadístico. Es complemtante open-source
+R es un potente paquete de análisis numérico y estadístico. Es complemtante open-source.
+En su instalación normal nos proporciona una consola sobre la que trabajar.
 
-Instalar R en ubuntu
+## Instalación
+
+### Instalar R en ubuntu
 
 sudo apt-get install r-base
 
@@ -12,6 +15,12 @@ Unos 100Mb de instalación después podemos abrir la consola ejecutando
 Podemos abrir la ayuda en un navegador con 
 help.start()
 
+### Entornos más _amigables_ 
+
+Como hemos comentado, R es una herramienta interativa, podíamos decir que un intérprete, con el que interaccionamos mediante una consola. Todas las instrucciones que le vamos dando se guardan en un ficherro denominado .Rhistory que se crea en el directorio desde el que lo hemos arrando. Por esto podemos tener varios ficheros .Rhistory. Personalmente uso este hecho para guardar los pasos que voy dando en diferentes proyectos.
+
+Si eres más de ratón que de teclado puedes usar [RStudio](www.rstudio.com) que nos proporciona un entorno visual, donde es fácil ver los objetos (datos) que tenemos disponibles, los diferentes comandos empleados, etc.
+
 ## CookBook
 
 * **q()** Salir de R
@@ -20,8 +29,6 @@ help.start()
 granada.data <- read.csv('user-data-Granada.csv',sep=';')
 
 * **summary(granada.data)** Resumen de los datos
-
-
 
 * Para instalar un package (por ejemplo ggplot2 para hacer gráficos)
 
@@ -72,6 +79,10 @@ madrid.data <- read.csv('user-data-Madrid.csv',sep=';')
 
 * Podemos hacer una **regresión lineal** (linear model) usando ** lm(waiting ~ duration) ** y representar la línea con abline(lm(waiting ~ duration)) [detalles](http://msenux.redwoods.edu/math/R/regression.php) [abline](https://stat.ethz.ch/R-manual/R-devel/library/graphics/html/abline.html). Podemos hacer que no se transforme ¿según los ejes? con **untf='true' **
 
+* Para ajustar por mínimos cuadrados ** [lsfit](https://stat.ethz.ch/R-manual/R-patched/library/stats/html/lsfit.html)
+[más detallado](http://sites.stat.psu.edu/~jls/stat511/lectures/lec10.pdf)
+La diferencia entre ls y lsfit es que en lsfit tenemos que proporcionar la matriz del ajuste y en ls sólo damos los datos
+
 * Para guardar una imagen podemos hacer ggsave("image.png")
 
 * Para usar una librería haremos ** library("ggplot2") ** lo que nos permitirá usar nuevos métodos
@@ -87,6 +98,5 @@ madrid.data <- read.csv('user-data-Madrid.csv',sep=';')
 
 * Visualizamos un objeto con ** view(objeto) **
 
-* Podemos representar una función con ** [curve]|(http://astrostatistics.psu.edu/su07/R/html/graphics/html/curve.html) ** 
+* Podemos representar una función con ** [curve](http://astrostatistics.psu.edu/su07/R/html/graphics/html/curve.html) ** 
 
-* Para ajustar por mínimos cuadrados ** [lsfit
