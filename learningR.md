@@ -35,7 +35,18 @@ Si no lo estamos ejecutando como root (lo cual está bien), nos preguntará si q
 
 * Cuando lo usamos se genera un fichero llamado **.Rhistory** con los distintos comandos, y ¿ cuando abrimos R desde una carpeta con un fichero así tenemos accesible  el histórico de comandos
 
-* Si usamos **plot(dataset)** se representan todos los gráficos posibles de cada columna con todas las demas. En la diagonal aparecen los nombres de esa columna/fila
+* Si usamos **plot(dataset)** se representan todos los gráficos posibles de cada columna con todas las demas. En la diagonal aparecen los nombres de esa columna/fila. [plot](http://stat.ethz.ch/R-manual/R-devel/library/graphics/html/plot.html) permite dibujar también funciones.
+
+	fun1 <- function(x) sin(cos(x)*exp(-x/2))
+	plot (fun1, -8, 5)
+
+Podemos añadir varios gráficos usando el argumento ** add=TRUE **
+
+	fun2 <- function(x) sin(sin(x)*exp(-x/2))
+	plot (fun2, -8, 5,add=TRUE)
+	plot (fun1, -8, 5,add=TRUE)
+
+Para seleccionar el color usarmos ** col='red' **
 
 * Para representar un gráfico hacemos **plot(dataset$columanY,dataset$columnaY)** donde podemos usar cualquier operación matemática
 
@@ -59,7 +70,7 @@ Si no lo estamos ejecutando como root (lo cual está bien), nos preguntará si q
 
 madrid.data <- read.csv('user-data-Madrid.csv',sep=';')
 
-* Podemos hacer una **regresión lineal** (linear model) usando ** lm(waiting ~ duration) ** y representar la línea con abline(lm(waiting ~ duration)) (no me funciona!!) [detalles](http://msenux.redwoods.edu/math/R/regression.php)
+* Podemos hacer una **regresión lineal** (linear model) usando ** lm(waiting ~ duration) ** y representar la línea con abline(lm(waiting ~ duration)) [detalles](http://msenux.redwoods.edu/math/R/regression.php) [abline](https://stat.ethz.ch/R-manual/R-devel/library/graphics/html/abline.html). Podemos hacer que no se transforme ¿según los ejes? con **untf='true' **
 
 * Para guardar una imagen podemos hacer ggsave("image.png")
 
@@ -71,3 +82,11 @@ madrid.data <- read.csv('user-data-Madrid.csv',sep=';')
 	geom_point(aes(y=log10(almeria.data$contributions),x=almeria.data$orderScaled,color='almeria.data$contributions'))  
 
 * Los datasets usados se guardan en .Rdata Si guardamos el workspace al salir se irán
+
+* Podemos hacer que se muestren los ejes en escala logarítmica usando el parámetro de plot log="xy" (para los dos ejes o log="x" para uno)
+
+* Visualizamos un objeto con ** view(objeto) **
+
+* Podemos representar una función con ** [curve]|(http://astrostatistics.psu.edu/su07/R/html/graphics/html/curve.html) ** 
+
+* Para ajustar por mínimos cuadrados ** [lsfit
