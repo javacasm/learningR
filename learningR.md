@@ -65,7 +65,7 @@ granada.data <- read.csv('user-data-Granada.csv',sep=';')
 
 * Para representar un gráfico hacemos **plot(dataset$columanY,dataset$columnaY)** donde podemos usar cualquier operación matemática
 
-* Podemos añadir una columna sin más que utilizar **ataset$NuevaColumna<-funcion(otros datos)** . Por ejemplo
+* Podemos añadir una columna sin más que utilizar **dataset$NuevaColumna<-funcion(otros datos)** . Por ejemplo
 
 	 	granada.data$orderScaled<-seq_along(granada.data$contributions)/length(granada.data$contributions)
 
